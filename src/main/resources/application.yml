@@ -1,0 +1,50 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: ai-agent-orchestrator
+  datasource:
+    url: jdbc:postgresql://localhost:5432/javarag
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+agent:
+  rag:
+    base-url: http://localhost:8080
+    chat-path: /api/v1/chat/query
+  workspace:
+    root-dir: ./agent-workspace
+  memory:
+    dir: ./agent-workspace/memory
+  template:
+    doc-path: classpath:doc-template.md
+  openai:
+    model: gpt-4o-mini
+    temperature: 0.2
+  confluence:
+    url: ${CONFLUENCE_URL:https://prognum.atlassian.net/wiki}
+    email: ${CONFLUENCE_EMAIL}
+    api-token: ${CONFLUENCE_API_TOKEN}
+
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${OPENAI_API_KEY}
+      model-name: ${agent.openai.model}
+      temperature: ${agent.openai.temperature}
+      log-requests: true
+      log-responses: true
+
+logging:
+  level:
+    dev.langchain4j: DEBUG
+    com.jdeveloperweb.aiagent: DEBUG

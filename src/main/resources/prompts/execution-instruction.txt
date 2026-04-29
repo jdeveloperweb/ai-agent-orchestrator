@@ -1,0 +1,5 @@
+SESSION_ID: {{sessionId}}
+
+OBJETIVO: {{objective}}
+
+SPEC_ONLY: {{specOnly}}

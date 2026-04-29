@@ -1,0 +1,11 @@
+SESSION_ID: {{sessionId}}
+
+OBJETIVO: {{objective}}
+
+SPEC_ONLY: {{specOnly}}
+
+EXECUTE AGORA, nesta ordem:
+1. Use pesquisarNegocio para buscar documentos relevantes no Confluence sobre o objetivo acima.
+2. Se encontrar uma pagina central, use lerDocumentacaoNegocio(idPagina) para ler o conteudo completo.
+3. Use consultarRag para identificar as tabelas e entidades do banco envolvidas.
+4. Com base no que encontrou, retorne a lista numerada de tarefas conforme o formato instrucional.

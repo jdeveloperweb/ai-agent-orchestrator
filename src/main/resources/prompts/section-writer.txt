@@ -1,0 +1,16 @@
+=== SOLICITACAO GERAL ===
+{{objective}}
+
+{{analysisPlan}}
+
+{{ragInsights}}
+
+{{previousSections}}
+
+{{reflectionHistory}}
+
+=== SECAO A GERAR AGORA ===
+Gere SOMENTE a secao: {{sectionKey}}
+
+Formato obrigatorio para esta secao:
+{{sectionTemplate}}
