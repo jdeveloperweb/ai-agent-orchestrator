@@ -121,4 +121,4 @@ src/main/resources/
 5. Abra um Pull Request
 
 ---
-Desenvolvido com ❤️ pela equipe de IA da **Prognum**.
+Desenvolvido com ❤️ por  **Jaime Vicente Jr**.
